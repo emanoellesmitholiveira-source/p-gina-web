@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos de Português - Ensino Médio</title>
+    <style>
+        /* Mantendo o padrão visual do index.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a; /* Fundo Azul Escuro */
+            color: #ffffff; /* Letras Brancas */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container-resumos {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Retângulos dos Subtópicos */
+        .card-subtopico {
+            background-color: #415a77; /* Fundo Azul Claro */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-subtopico h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 5px;
+        }
+
+        .conteudo-texto {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .conteudo-texto p {
+            margin-bottom: 15px;
+        }
+
+        .conteudo-texto ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão para voltar para a página inicial */
+        .btn-voltar {
+            margin-top: 40px;
+            background-color: #778da9;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Português</h1>
+        <p>Conteúdos focados no Ensino Médio e Vestibulares</p>
+    </header>
+
+    <main class="container-resumos">
+
+        <section class="card-subtopico">
+            <h2>Literatura: Quinhentismo e Barroco</h2>
+            <div class="conteudo-texto">
+                <p>O <strong>Quinhentismo</strong> representa a literatura produzida no Brasil na época do descobrimento (século XVI). Destaca-se a literatura de informação (cartas de Pero Vaz de Caminha) e a literatura de catequese (Padre Anchieta).</p>
+                <p>Já o <strong>Barroco</strong> (século XVII) reflete o conflito entre o sagrado e o profano, o corpo e a alma. Características principais: dualismo, feísmo, conceptismo (jogo de ideias) e cultismo (jogo de palavras). Principal autor: Gregório de Matos.</p>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Gramática: Sintaxe do Período Composto</h2>
+            <div class="conteudo-texto">
+                <p>Estudo das orações que formam um período, divididas entre:</p>
+                <ul>
+                    <li><strong>Orações Coordenadas:</strong> São independentes entre si. Podem ser sindéticas (com conjunção: aditivas, adversativas, alternativas, conclusivas, explicativas) ou assindéticas (sem conjunção).</li>
+                    <li><strong>Orações Subordinadas:</strong> Dependem de uma oração principal. Dividem-se em substantivas, adjetivas e adverbiais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Redação: Estrutura do Texto Dissertativo-Argumentativo</h2>
+            <div class="conteudo-texto">
+                <p>O modelo exigido pelo ENEM e pela maioria dos vestibulares divide-se em 3 partes fundamentais:</p>
+                <p><strong>1. Introdução:</strong> Apresentação do tema + contextualização + tese (sua opinião central).</p>
+                <p><strong>2. Desenvolvimento:</strong> Geralmente dividido em dois parágrafos. Uso de argumentos sólidos, dados estatísticos e repertório sociocultural para defender a tese.</p>
+                <p><strong>3. Conclusão:</strong> Retomada da tese + Proposta de Intervenção (composta por 5 elementos: Agente, Ação, Meio/Modo, Efeito e Detalhamento).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+
+</body>
+</html>
