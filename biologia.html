@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos de Biologia - Ensino Médio</title>
+    <style>
+        /* Mantendo o padrão visual idêntico aos outros arquivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a; /* Fundo Azul Escuro */
+            color: #ffffff; /* Letras Brancas */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container-resumos {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Retângulos dos Subtópicos */
+        .card-subtopico {
+            background-color: #415a77; /* Fundo Azul Claro */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-subtopico h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 5px;
+        }
+
+        .conteudo-texto {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .conteudo-texto p {
+            margin-bottom: 15px;
+        }
+
+        .conteudo-texto ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão para voltar para a página inicial */
+        .btn-voltar {
+            margin-top: 40px;
+            background-color: #778da9;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Biologia</h1>
+        <p>O estudo da vida, desde as células até os ecossistemas</p>
+    </header>
+
+    <main class="container-resumos">
+
+        <section class="card-subtopico">
+            <h2>Citologia: Células e Organelas</h2>
+            <div class="conteudo-texto">
+                <p>A citologia estuda as células, que são as unidades básicas da vida. As células eucariontes (como as nossas e as das plantas) possuem várias organelas no citoplasma, cada uma com uma função específica:</p>
+                <ul>
+                    <li><strong>Mitocôndria:</strong> Responsável pela respiração celular e produção de energia (ATP).</li>
+                    <li><strong>Ribossomos:</strong> Fazem a síntese (produção) de proteínas.</li>
+                    <li><strong>Complexo de Golgi:</strong> Armazena, modifica e exporta substâncias produzidas pela célula.</li>
+                    <li><strong>Lisossomos:</strong> Responsáveis pela digestão intracelular (limpeza da célula).</li>
+                    <li><strong>Cloroplastos:</strong> Exclusivos de células vegetais, realizam a fotossíntese.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Genética: Conceitos Básicos e Leis de Mendel</h2>
+            <div class="conteudo-texto">
+                <p>A genética estuda os mecanismos de hereditariedade (como as características passam de pais para filhos):</p>
+                <ul>
+                    <li><strong>DNA e Genes:</strong> O DNA carrega a nossa informação genética. Um gene é um pedaço do DNA que determina uma característica.</li>
+                    <li><strong>Genótipo vs. Fenótipo:</strong> Genótipo é o conjunto de genes (ex: AA, Aa, aa). Fenótipo é a característica visível influenciada pelo ambiente (ex: cor dos olhos).</li>
+                    <li><strong>Primeira Lei de Mendel:</strong> Diz que cada característica é determinada por um par de fatores (alelos) que se separam na formação dos gametas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Ecologia: Cadeias Alimentares e Relações Ecológicas</h2>
+            <div class="conteudo-texto">
+                <p>Estudo das interações dos seres vivos entre si e com o ambiente:</p>
+                <p><strong>Cadeia Alimentar:</strong> Mostra o fluxo unidirecional de energia. Começa nos <strong>Produtores</strong> (plantas/algas), passa pelos <strong>Consumidores</strong> (herbívoros e carnívoros) e fecha nos <strong>Decompositores</strong> (fungos e bactérias), que reciclam a matéria.</p>
+                <p><strong>Relações Ecológicas:</strong> Podem ser harmônicas (onde ninguém sai prejudicado, como o mutualismo e a sociedade) ou desarmônicas (onde alguém sai perdendo, como o parasitismo e o predadorismo).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+
+</body>
+</html>
