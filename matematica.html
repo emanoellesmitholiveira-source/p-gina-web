@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos de Matemática - Ensino Médio</title>
+    <style>
+        /* Mantendo o padrão visual idêntico aos outros arquivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a; /* Fundo Azul Escuro */
+            color: #ffffff; /* Letras Brancas */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container-resumos {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Retângulos dos Subtópicos */
+        .card-subtopico {
+            background-color: #415a77; /* Fundo Azul Claro */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-subtopico h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 5px;
+        }
+
+        .conteudo-texto {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .conteudo-texto p {
+            margin-bottom: 15px;
+        }
+
+        .conteudo-texto ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão para voltar para a página inicial */
+        .btn-voltar {
+            margin-top: 40px;
+            background-color: #778da9;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Matemática</h1>
+        <p>Conteúdos essenciais e fórmulas do Ensino Médio</p>
+    </header>
+
+    <main class="container-resumos">
+
+        <section class="card-subtopico">
+            <h2>Funções: 1º e 2º Grau</h2>
+            <div class="conteudo-texto">
+                <p><strong>Função de 1º Grau (Afin):</strong> Tem a fórmula f(x) = ax + b. O seu gráfico no plano cartesiano é sempre uma <strong>linha reta</strong>. Se o "a" for positivo, a reta cresce; se for negativo, decresce.</p>
+                <p><strong>Função de 2º Grau (Quadrática):</strong> Tem a fórmula f(x) = ax² + bx + c. O seu gráfico é uma <strong>parábola</strong> (aquela curva em formato de "U"). Para encontrar onde a curva corta o eixo X, usamos a famosa Fórmula de Bhaskara.</p>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Progressões: P.A. e P.G.</h2>
+            <div class="conteudo-texto">
+                <p>São sequências numéricas que seguem um padrão matemático fixo:</p>
+                <ul>
+                    <li><strong>Progressão Aritmética (PA):</strong> Os números aumentam ou diminuem <strong>somando</strong> uma constante (chamada de razão "r"). Exemplo: (2, 5, 8, 11...) onde somamos sempre 3.</li>
+                    <li><strong>Progressão Geométrica (PG):</strong> Os números aumentam ou diminuem <strong>multiplicando</strong> por uma constante (razão "q"). Exemplo: (2, 4, 8, 16...) onde multiplicamos sempre por 2.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Geometria Plana vs. Spatial (Espacial)</h2>
+            <div class="conteudo-texto">
+                <p><strong>Geometria Plana:</strong> Estuda figuras bidimensionais (chatas, no papel), focando em cálculo de Área e Perímetro. Exemplos principais: Quadrado (A = L²), Retângulo (A = b . h) e Triângulo (A = b . h / 2).</p>
+                <p><strong>Geometria Espacial:</strong> Estuda figuras em 3D (objetos sólidos que ocupam lugar no espaço), focando no cálculo de Volume. Exemplos do Ensino Médio: Cubos, Prismas, Cilindros e Esferas.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+
+</body>
+</html>
