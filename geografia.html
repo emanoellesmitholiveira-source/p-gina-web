@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos de Geografia - Ensino Médio</title>
+    <style>
+        /* Mantendo o padrão visual idêntico aos outros arquivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a; /* Fundo Azul Escuro */
+            color: #ffffff; /* Letras Brancas */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container-resumos {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Retângulos dos Subtópicos */
+        .card-subtopico {
+            background-color: #415a77; /* Fundo Azul Claro */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-subtopico h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 5px;
+        }
+
+        .conteudo-texto {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .conteudo-texto p {
+            margin-bottom: 15px;
+        }
+
+        .conteudo-texto ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão para voltar para a página inicial */
+        .btn-voltar {
+            margin-top: 40px;
+            background-color: #778da9;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Geografia</h1>
+        <p>Entendendo o espaço geográfico, a natureza e a sociedade</p>
+    </header>
+
+    <main class="container-resumos">
+
+        <section class="card-subtopico">
+            <h2>Cartografia: Escalas e Projeções</h2>
+            <div class="conteudo-texto">
+                <p>A cartografia é a arte e ciência de criar mapas. Dois conceitos são fundamentais:</p>
+                <ul>
+                    <li><strong>Escala:</strong> Indica quanto a realidade foi reduzida para caber no papel. Pode ser numérica (ex: 1:100.000) ou gráfica (uma régua no mapa).</li>
+                    <li><strong>Projeções Cilíndricas:</strong> As mais famosas são a de <strong>Mercator</strong> (preserva as formas, mas distorce o tamanho, sendo eurocêntrica) e a de <strong>Peters</strong> (preserva o tamanho real das massas de terra, mas distorce as formas).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Domínios Morfoclimáticos e Biomas Brasileiros</h2>
+            <div class="conteudo-texto">
+                <p>O Brasil possui uma enorme biodiversidade dividida em grandes biomas:</p>
+                <ul>
+                    <li><strong>Amazônia:</strong> Floresta latifoliada, clima equatorial e solo pobre, mas rico em serapilheira (matéria orgânica).</li>
+                    <li><strong>Cerrado:</strong> A "caixa d'água" do Brasil. Vegetação com troncos tortuosos, casca grossa e raízes profundas para buscar água no lençol freático.</li>
+                    <li><strong>Caatinga:</strong> Bioma exclusivo do Brasil. Vegetação xerófila (adaptada à seca), como os cactos.</li>
+                    <li><strong>Mata Atlântica:</strong> Bioma mais devastado do país devido ao histórico de ocupação no litoral.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Globalização e Geopolítica</h2>
+            <div class="conteudo-texto">
+                <p>A <strong>Globalização</strong> é o processo de integração econômica, cultural e política entre os países, impulsionado pela revolução nos transportes e nas comunicações.</p>
+                <p>Na <strong>Geopolítica atual</strong>, observamos a divisão entre o "Norte" (países desenvolvidos e ricos) e o "Sul" (países em desenvolvimento ou subdesenvolvidos). Além disso, destaca-se a formação de blocos econômicos (como o MERCOSUL e a União Europeia) e a importância de grupos como os <strong>BRICS</strong>.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+
+</body>
+</html>
