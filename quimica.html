@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos de Química - Ensino Médio</title>
+    <style>
+        /* Mantendo o padrão visual idêntico aos outros arquivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a; /* Fundo Azul Escuro */
+            color: #ffffff; /* Letras Brancas */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container-resumos {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Retângulos dos Subtópicos */
+        .card-subtopico {
+            background-color: #415a77; /* Fundo Azul Claro */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-subtopico h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 5px;
+        }
+
+        .conteudo-texto {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .conteudo-texto p {
+            margin-bottom: 15px;
+        }
+
+        .conteudo-texto ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Botão para voltar para a página inicial */
+        .btn-voltar {
+            margin-top: 40px;
+            background-color: #778da9;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Química</h1>
+        <p>A ciência das transformações, átomos e moléculas</p>
+    </header>
+
+    <main class="container-resumos">
+
+        <section class="card-subtopico">
+            <h2>Evolução dos Modelos Atômicos</h2>
+            <div class="conteudo-texto">
+                <p>O conceito de átomo mudou muito ao longo da história da ciência através de quatro modelos principais:</p>
+                <ul>
+                    <li><strong>Dalton (Bola de Bilhar):</strong> O átomo seria uma esfera maciça, indivisível e indestrutível.</li>
+                    <li><strong>Thomson (Pudim de Passas):</strong> Descobriu o elétron. O átomo seria uma esfera de carga positiva recheada de cargas negativas.</li>
+                    <li><strong>Rutherford (Modelo Planetário):</strong> Descobriu que o átomo tem um núcleo pequeno e positivo, com os elétrons girando ao redor na eletrosfera.</li>
+                    <li><strong>Bohr:</strong> Adicionou a ideia de órbitas quantizadas. Os elétrons giram em níveis de energia fixos e emitem luz (fótons) quando mudam de nível.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Ligações Químicas Interatômicas</h2>
+            <div class="conteudo-texto">
+                <p>Os átomos se ligam para alcançar a estabilidade (geralmente completando 8 elétrons na última camada, a Regra do Octeto):</p>
+                <ul>
+                    <li><strong>Ligação Iônica:</strong> Ocorre entre metais e ametais. Há a <strong>transferência definitiva</strong> de elétrons (um perde e o outro ganha), formando íons (cátions e ânions).</li>
+                    <li><strong>Ligação Covalente:</strong> Ocorre entre ametais e hidrogênio. Há o <strong>compartilhamento</strong> de pares de elétrons entre os átomos.</li>
+                    <li><strong>Ligação Metálica:</strong> Ocorre apenas entre metais. É explicada pela teoria do "mar de elétrons", o que confere aos metais a propriedade de conduzir muita eletricidade e calor.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-subtopico">
+            <h2>Introdução à Química Orgânica</h2>
+            <div class="conteudo-texto">
+                <p>É a parte da química que estuda os compostos baseados no elemento <strong>Carbono</strong>. O carbono é tetravalente, o que significa que ele precisa fazer exatamente 4 ligações químicas para se estabilizar.</p>
+                <p>As funções orgânicas mais simples são os <strong>Hidrocarbonetos</strong> (compostos formados apenas por átomos de Carbono e Hidrogênio), como o gás de cozinha (butano) e a gasolina. Eles são classificados pelo tipo de ligação entre os carbonos: alcanos (ligações simples), alcenos (uma ligação dupla) e alcinos (uma ligação tripla).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+
+</body>
+</html>
