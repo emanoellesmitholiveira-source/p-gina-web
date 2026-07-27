@@ -5,124 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumos de Matemática - Ensino Médio</title>
     <style>
-        /* Mantendo o padrão visual idêntico aos outros arquivos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0d1b2a; /* Fundo Azul Escuro */
-            color: #ffffff; /* Letras Brancas */
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .container-resumos {
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        /* Retângulos dos Subtópicos */
-        .card-subtopico {
-            background-color: #415a77; /* Fundo Azul Claro */
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-subtopico h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #778da9;
-            padding-bottom: 5px;
-        }
-
-        .conteudo-texto {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .conteudo-texto p {
-            margin-bottom: 15px;
-        }
-
-        .conteudo-texto ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* Botão para voltar para a página inicial */
-        .btn-voltar {
-            margin-top: 40px;
-            background-color: #778da9;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-
-        .btn-voltar:hover {
-            background-color: #e0e1dd;
-            color: #0d1b2a;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d1b2a; color: #ffffff; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        header { text-align: center; margin-bottom: 40px; margin-top: 20px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container-resumos { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 20px; }
+        details { background-color: #415a77; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background-color 0.2s; }
+        details:hover { background-color: #4e6a8e; }
+        summary { font-size: 1.4rem; font-weight: bold; color: #ffffff; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::after { content: "▼"; font-size: 1rem; transition: transform 0.3s; }
+        details[open] summary::after { transform: rotate(180deg); }
+        .conteudo-texto { margin-top: 20px; padding-top: 15px; border-top: 2px solid #778da9; font-size: 1.1rem; line-height: 1.6; cursor: default; }
+        .conteudo-texto p { margin-bottom: 15px; }
+        .conteudo-texto ul { margin-left: 20px; margin-bottom: 15px; }
+        .btn-voltar { margin-top: 40px; background-color: #778da9; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; transition: background-color 0.2s; }
+        .btn-voltar:hover { background-color: #e0e1dd; color: #0d1b2a; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Matemática</h1>
-        <p>Conteúdos essenciais e fórmulas do Ensino Médio</p>
+        <p>Clique nos tópicos abaixo para abrir e fechar a explicação!</p>
     </header>
 
     <main class="container-resumos">
 
-        <section class="card-subtopico">
-            <h2>Funções: 1º e 2º Grau</h2>
+        <details>
+            <summary>Função do 1º e 2º Grau</summary>
             <div class="conteudo-texto">
-                <p><strong>Função de 1º Grau (Afin):</strong> Tem a fórmula f(x) = ax + b. O seu gráfico no plano cartesiano é sempre uma <strong>linha reta</strong>. Se o "a" for positivo, a reta cresce; se for negativo, decresce.</p>
-                <p><strong>Função de 2º Grau (Quadrática):</strong> Tem a fórmula f(x) = ax² + bx + c. O seu gráfico é uma <strong>parábola</strong> (aquela curva em formato de "U"). Para encontrar onde a curva corta o eixo X, usamos a famosa Fórmula de Bhaskara.</p>
+                <p><strong>Função do 1º Grau (Afim):</strong> Representada por f(x) = ax + b. Seu gráfico é uma reta. Se 'a' for positivo, a reta é crescente; se for negativo, é decrescente.</p>
+                <p><strong>Função do 2º Grau (Quadrática):</strong> Representada por f(x) = ax² + bx + c. Seu gráfico é uma parábola. O valor de Δ (Delta) define as raízes e a concavidade depende do sinal de 'a'.</p>
             </div>
-        </section>
+        </details>
 
-        <section class="card-subtopico">
-            <h2>Progressões: P.A. e P.G.</h2>
+        <details>
+            <summary>Progressão Aritmética (P.A.) e Geométrica (P.G.)</summary>
             <div class="conteudo-texto">
-                <p>São sequências numéricas que seguem um padrão matemático fixo:</p>
+                <p><strong>P.A. (Progressão Aritmética):</strong> Sequência onde a diferença entre termos vizinhos é constante (razão r). Os termos somam um valor fixo. Fórmula do termo geral: an = a1 + (n - 1) * r.</p>
+                <p><strong>P.G. (Progressão Geométrica):</strong> Sequência onde cada termo é multiplicado por uma razão fixa (q). Fórmula do termo geral: an = a1 * q^(n - 1).</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Geometria Plana: Áreas das Principais Figuras</summary>
+            <div class="conteudo-texto">
+                <p>Principais fórmulas de área para memorizar:</p>
                 <ul>
-                    <li><strong>Progressão Aritmética (PA):</strong> Os números aumentam ou diminuem <strong>somando</strong> uma constante (chamada de razão "r"). Exemplo: (2, 5, 8, 11...) onde somamos sempre 3.</li>
-                    <li><strong>Progressão Geométrica (PG):</strong> Os números aumentam ou diminuem <strong>multiplicando</strong> por uma constante (razão "q"). Exemplo: (2, 4, 8, 16...) onde multiplicamos sempre por 2.</li>
+                    <li><strong>Quadrado:</strong> Lado x Lado (L²)</li>
+                    <li><strong>Retângulo:</strong> Base x Altura (b x h)</li>
+                    <li><strong>Triângulo:</strong> (Base x Altura) / 2</li>
+                    <li><strong>Círculo:</strong> π x Raio² (π.r²)</li>
                 </ul>
             </div>
-        </section>
-
-        <section class="card-subtopico">
-            <h2>Geometria Plana vs. Spatial (Espacial)</h2>
-            <div class="conteudo-texto">
-                <p><strong>Geometria Plana:</strong> Estuda figuras bidimensionais (chatas, no papel), focando em cálculo de Área e Perímetro. Exemplos principais: Quadrado (A = L²), Retângulo (A = b . h) e Triângulo (A = b . h / 2).</p>
-                <p><strong>Geometria Espacial:</strong> Estuda figuras em 3D (objetos sólidos que ocupam lugar no espaço), focando no cálculo de Volume. Exemplos do Ensino Médio: Cubos, Prismas, Cilindros e Esferas.</p>
-            </div>
-        </section>
+        </details>
 
     </main>
 
