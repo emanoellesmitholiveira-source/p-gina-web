@@ -5,128 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumos de História - Ensino Médio</title>
     <style>
-        /* Mantendo o padrão visual idêntico aos outros arquivos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0d1b2a; /* Fundo Azul Escuro */
-            color: #ffffff; /* Letras Brancas */
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .container-resumos {
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        /* Retângulos dos Subtópicos */
-        .card-subtopico {
-            background-color: #415a77; /* Fundo Azul Claro */
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-subtopico h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #778da9;
-            padding-bottom: 5px;
-        }
-
-        .conteudo-texto {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .conteudo-texto p {
-            margin-bottom: 15px;
-        }
-
-        .conteudo-texto ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* Botão para voltar para a página inicial */
-        .btn-voltar {
-            margin-top: 40px;
-            background-color: #778da9;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-
-        .btn-voltar:hover {
-            background-color: #e0e1dd;
-            color: #0d1b2a;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d1b2a; color: #ffffff; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        header { text-align: center; margin-bottom: 40px; margin-top: 20px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container-resumos { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 20px; }
+        details { background-color: #415a77; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background-color 0.2s; }
+        details:hover { background-color: #4e6a8e; }
+        summary { font-size: 1.4rem; font-weight: bold; color: #ffffff; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::after { content: "▼"; font-size: 1rem; transition: transform 0.3s; }
+        details[open] summary::after { transform: rotate(180deg); }
+        .conteudo-texto { margin-top: 20px; padding-top: 15px; border-top: 2px solid #778da9; font-size: 1.1rem; line-height: 1.6; cursor: default; }
+        .conteudo-texto p { margin-bottom: 15px; }
+        .conteudo-texto ul { margin-left: 20px; margin-bottom: 15px; }
+        .btn-voltar { margin-top: 40px; background-color: #778da9; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; transition: background-color 0.2s; }
+        .btn-voltar:hover { background-color: #e0e1dd; color: #0d1b2a; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>História</h1>
-        <p>Resumos dos principais acontecimentos do Brasil e do Mundo</p>
+        <p>Clique nos tópicos abaixo para abrir e fechar a explicação!</p>
     </header>
 
     <main class="container-resumos">
 
-        <section class="card-subtopico">
-            <h2>Brasil Colônia: Economia Açucareira</h2>
+        <details>
+            <summary>Brasil Colônia: Economia Açucareira</summary>
             <div class="conteudo-texto">
-                <p>O período colonial brasileiro foi marcado fortemente pela produção de açúcar no Nordeste (séculos XVI e XVII). A estrutura social e econômica era baseada no sistema de <strong>Plantation</strong>, composto por quatro pilares:</p>
+                <p>O período colonial brasileiro foi marcado pela produção de açúcar no Nordeste. A estrutura era baseada no sistema de <strong>Plantation</strong>:</p>
                 <ul>
                     <li>Latifúndio (grandes extensões de terra);</li>
-                    <li>Monocultura (foco em apenas um produto, o açúcar);</li>
-                    <li>Mão de obra escravizada (indígena inicialmente, e depois africana);</li>
-                    <li>Produção voltada para a exportação (mercado europeu).</li>
+                    <li>Monocultura (foco no açúcar);</li>
+                    <li>Mão de obra escravizada (africana e indígena);</li>
+                    <li>Produção voltada para a exportação europeia.</li>
                 </ul>
             </div>
-        </section>
+        </details>
 
-        <section class="card-subtopico">
-            <h2>A Primeira e Segunda Guerra Mundial</h2>
+        <details>
+            <summary>Primeira e Segunda Guerra Mundial</summary>
             <div class="conteudo-texto">
-                <p><strong>Primeira Guerra Mundial (1914-1918):</strong> Motivada por disputas imperialistas na Europa e nacionalismos exacerbados. Marcada pela sangrenta "Guerra de Trincheiras". Terminou com a derrota da Alemanha e a assinatura do Tratado de Versalhes.</p>
-                <p><strong>Segunda Guerra Mundial (1939-1945):</strong> Teve como estopim a invasão da Polônia pela Alemanha nazista de Adolf Hitler. Dividiu o mundo entre os Aliados (EUA, URSS, Reino Unido) e o Eixo (Alemanha, Itália, Japão). Terminou com a vitória dos Aliados e deu início à Guerra Fria.</p>
+                <p><strong>Primeira Guerra (1914-1918):</strong> Motivada por disputas imperialistas. Ficou famosa pela Guerra de Trincheiras e terminou com o Tratado de Versalhes.</p>
+                <p><strong>Segunda Guerra (1939-1945):</strong> Estopim foi a invasão da Polônia por Hitler. Opôs Aliados vs. Eixo, terminando com a vitória dos Aliados e início da Guerra Fria.</p>
             </div>
-        </section>
+        </details>
 
-        <section class="card-subtopico">
-            <h2>A Era Vargas (1930-1945)</h2>
+        <details>
+            <summary>A Era Vargas (1930-1945)</summary>
             <div class="conteudo-texto">
-                <p>Período de 15 anos em que Getúlio Vargas governou o Brasil de forma contínua. É dividido em três fases:</p>
-                <p><strong>1. Governo Provisório (1930-1934):</strong> Vargas assume após a Revolução de 30, centralizando o poder e enfrentando a Revolução Constitucionalista de 1932 em São Paulo.</p>
-                <p><strong>2. Governo Constitucional (1934-1937):</strong> Fase sob uma nova Constituição. Período de forte polarização política entre a esquerda (ANL) e a direita fascista (AIB).</p>
-                <p><strong>3. Estado Novo (1937-1945):</strong> Ditadura varguista. Marcada pela censura (DIP), mas também pela criação das principais leis trabalhistas (CLT) e forte industrialização do país.</p>
+                <p>Período de 15 anos de governo ininterrupto de Getúlio Vargas, dividido em 3 fases:</p>
+                <p><strong>1. Governo Provisório (1930-1934):</strong> Centralização política e Revolução de 1932 em SP.</p>
+                <p><strong>2. Governo Constitucional (1934-1937):</strong> Período de polarização entre comunistas (ANL) e fascistas (AIB).</p>
+                <p><strong>3. Estado Novo (1937-1945):</strong> Ditadura varguista com censura, criação da CLT e forte industrialização.</p>
             </div>
-        </section>
+        </details>
 
     </main>
 
