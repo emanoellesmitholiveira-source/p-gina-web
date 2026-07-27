@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlog de Estudos - Ensino Médio</title>
+    <title>Vlog de Estudos - Resumos do Ensino Médio</title>
     <style>
-        /* Configurações Gerais da Página */
         * {
             margin: 0;
             padding: 0;
@@ -15,14 +14,14 @@
 
         body {
             background-color: #0d1b2a; /* Fundo Azul Escuro */
-            color: #ffffff; /* Letras Brancas em todo o site */
+            color: #ffffff; /* Texto Branco */
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
-        /* Cabeçalho do Vlog */
         header {
             text-align: center;
             margin-bottom: 40px;
@@ -30,171 +29,145 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #e0e1dd;
         }
 
         header p {
-            font-size: 1.1rem;
-            color: #e0e1dd;
+            font-size: 1.2rem;
+            color: #778da9;
         }
 
-        /* Container que segura todos os retângulos */
-        .container-materias {
+        /* Grade de Cartões das Matérias */
+        .grid-materias {
             width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px; /* Espaço entre um retângulo e outro */
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
-        /* Os Retângulos das Matérias (Um embaixo do outro) */
+        /* Card individual de cada matéria */
         .card-materia {
-            background-color: #415a77; /* Fundo Azul Claro / Médio para contraste */
+            background-color: #1b263b; /* Fundo do Card */
+            border: 2px solid #415a77;
             border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, border-color 0.2s;
         }
 
-        /* Efeito visual de movimento ao passar o mouse por cima do retângulo */
         .card-materia:hover {
             transform: translateY(-5px);
-            background-color: #4e6a8e; /* Fica levemente mais claro */
+            border-color: #e0e1dd;
         }
 
-        /* Título da Matéria dentro do Retângulo */
         .card-materia h2 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: #ffffff; /* Letras Brancas */
-            border-bottom: 2px solid #778da9; /* Linha sutil abaixo do título */
-            padding-bottom: 5px;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
 
-        /* Lista de Resumos dentro da Matéria */
-        .lista-resumos {
-            list-style: none;
-        }
-
-        .lista-resumos li {
-            margin-bottom: 12px;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        /* Marcador personalizado antes de cada resumo */
-        .lista-resumos li::before {
-            content: "•";
+        .card-materia p {
             color: #e0e1dd;
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
-
-        /* Links dos Resumos */
-        .lista-resumos a {
-            color: #ffffff; /* Letras Brancas */
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.2s;
-        }
-
-        .lista-resumos a:hover {
-            text-decoration: underline;
-            color: #e0e1dd; /* Muda sutilmente de cor ao passar o mouse */
-        }
-
-        /* Rodapé da Página */
-        footer {
-            margin-top: 60px;
+            font-size: 1rem;
             margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Botão Acessar Resumos */
+        .btn-acessar {
+            display: inline-block;
             text-align: center;
+            background-color: #415a77;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-acessar:hover {
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+
+        footer {
+            margin-top: auto;
             color: #778da9;
             font-size: 0.9rem;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meu Vlog de Estudos</h1>
-        <p>Resumos práticos dos conteúdos do Ensino Médio</p>
+        <h1>Vlog de Estudos</h1>
+        <p>Escolha uma matéria abaixo para explorar os resumos interativos!</p>
     </header>
 
-    <main class="container-materias">
+    <main class="grid-materias">
 
-        <section class="card-materia">
-            <h2>Português</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Figuras de Linguagem</a></li>
-                <li><a href="#"># Resumo 2: Funções da Linguagem</a></li>
-                <li><a href="#"># Resumo 3: Introdução à Literatura: Quinhentismo</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>Biologia</h2>
+                <p>Citologia, Genética, Ecologia e o estudo da vida.</p>
+            </div>
+            <a href="biologia.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
-        <section class="card-materia">
-            <h2>Matemática</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Funções de 1º e 2º Grau</a></li>
-                <li><a href="#"># Resumo 2: Progressão Aritmética (PA) e Geométrica (PG)</a></li>
-                <li><a href="#"># Resumo 3: Trigonometria no Triângulo Retângulo</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>Português</h2>
+                <p>Literatura, Gramática, Regência, Crase e Redação ENEM.</p>
+            </div>
+            <a href="portugues.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
-        <section class="card-materia">
-            <h2>História</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Brasil Colônia e Economia Açucareira</a></li>
-                <li><a href="#"># Resumo 2: A Primeira Guerra Mundial</a></li>
-                <li><a href="#"># Resumo 3: A Era Vargas no Brasil</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>Matemática</h2>
+                <p>Funções, Progressões (P.A. e P.G.) e Geometria Plana.</p>
+            </div>
+            <a href="matematica.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
-        <section class="card-materia">
-            <h2>Geografia</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Globalização e Efeitos Econômicos</a></li>
-                <li><a href="#"># Resumo 2: Biomas Brasileiros e Impactos Ambientais</a></li>
-                <li><a href="#"># Resumo 3: Urbanização e Crescimento das Cidades</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>História</h2>
+                <p>Brasil Colônia, Guerras Mundiais e a Era Vargas.</p>
+            </div>
+            <a href="historia.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
-        <section class="card-materia">
-            <h2>Inglês</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Simple Present vs. Present Continuous</a></li>
-                <li><a href="#"># Resumo 2: Técnicas de Leitura (Skimming e Scanning)</a></li>
-                <li><a href="#"># Resumo 3: Modal Verbs (Can, Could, Should, Must)</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>Geografia</h2>
+                <p>Cartografia, Biomas Brasileiros, Globalização e Geopolítica.</p>
+            </div>
+            <a href="geografia.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
-        <section class="card-materia">
-            <h2>Química</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Modelos Atômicos e Distribuição Eletrônica</a></li>
-                <li><a href="#"># Resumo 2: Ligações Químicas (Iônica e Covalente)</a></li>
-                <li><a href="#"># Resumo 3: Introdução à Química Orgânica</a></li>
-            </ul>
-        </section>
-
-        <section class="card-materia">
-            <h2>Biologia</h2>
-            <ul class="lista-resumos">
-                <li><a href="#"># Resumo 1: Citologia: Estrutura e Organelas Celulares</a></li>
-                <li><a href="#"># Resumo 2: Introdução à Genética e Leis de Mendel</a></li>
-                <li><a href="#"># Resumo 3: Cadeias Alimentares e Fluxo de Energia</a></li>
-            </ul>
-        </section>
+        <div class="card-materia">
+            <div>
+                <h2>Química</h2>
+                <p>Modelos Atômicos, Ligações Químicas e Química Orgânica.</p>
+            </div>
+            <a href="quimica.html" class="btn-acessar">Acessar Resumos</a>
+        </div>
 
     </main>
 
     <footer>
-        <p>&copy; Criado para o Trabalho de Programação do Ensino Médio</p>
+        <p>Vlog de Estudos - Todos os direitos reservados</p>
     </footer>
 
 </body>
