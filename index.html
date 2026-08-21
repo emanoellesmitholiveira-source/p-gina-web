@@ -18,6 +18,10 @@
             --btn-text: #ffffff;
             --btn-hover-bg: #e0e1dd;
             --btn-hover-text: #0d1b2a;
+            --input-bg: #1b263b;
+            --input-border: #415a77;
+            --input-text: #ffffff;
+            --input-placeholder: #778da9;
         }
 
         /* Variáveis de Cor - Modo Claro */
@@ -33,6 +37,10 @@
             --btn-text: #ffffff;
             --btn-hover-bg: #415a77;
             --btn-hover-text: #ffffff;
+            --input-bg: #ffffff;
+            --input-border: #cbd5e1;
+            --input-text: #1e293b;
+            --input-placeholder: #94a3b8;
         }
 
         * {
@@ -53,7 +61,7 @@
             min-height: 100vh;
         }
 
-        /* Botão Mudar Tema */
+        /* Topo com o Botão de Tema */
         .theme-toggle-container {
             width: 100%;
             max-width: 1000px;
@@ -81,7 +89,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             margin-top: 10px;
         }
 
@@ -94,6 +102,33 @@
         header p {
             font-size: 1.2rem;
             color: var(--header-sub);
+        }
+
+        /* Campo de Pesquisa */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            border: 2px solid var(--input-border);
+            background-color: var(--input-bg);
+            color: var(--input-text);
+            outline: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: var(--input-placeholder);
+        }
+
+        .search-input:focus {
+            border-color: var(--header-sub);
         }
 
         /* Grade de Cartões das Matérias */
@@ -172,8 +207,14 @@
         <p>Escolha uma matéria abaixo para explorar os resumos interativos!</p>
     </header>
 
-    <main class="grid-materias">
+    <!-- Barra de Pesquisa -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquise uma matéria...">
+    </div>
 
+    <main class="grid-materias" id="materiasGrid">
+
+        <!-- Biologia -->
         <div class="card-materia">
             <div>
                 <h2>Biologia</h2>
@@ -182,6 +223,7 @@
             <a href="biologia.html" class="btn-acessar">Acessar Resumos</a>
         </div>
 
+        <!-- Português -->
         <div class="card-materia">
             <div>
                 <h2>Português</h2>
@@ -190,6 +232,7 @@
             <a href="portugues.html" class="btn-acessar">Acessar Resumos</a>
         </div>
 
+        <!-- Matemática -->
         <div class="card-materia">
             <div>
                 <h2>Matemática</h2>
@@ -198,6 +241,7 @@
             <a href="matematica.html" class="btn-acessar">Acessar Resumos</a>
         </div>
 
+        <!-- História -->
         <div class="card-materia">
             <div>
                 <h2>História</h2>
@@ -206,6 +250,7 @@
             <a href="historia.html" class="btn-acessar">Acessar Resumos</a>
         </div>
 
+        <!-- Geografia -->
         <div class="card-materia">
             <div>
                 <h2>Geografia</h2>
@@ -214,6 +259,7 @@
             <a href="geografia.html" class="btn-acessar">Acessar Resumos</a>
         </div>
 
+        <!-- Química -->
         <div class="card-materia">
             <div>
                 <h2>Química</h2>
@@ -228,10 +274,11 @@
         <p>Vlog de Estudos - Todos os direitos reservados</p>
     </footer>
 
+    <!-- Scripts do Modo Escuro e da Barra de Pesquisa -->
     <script>
+        // Lógica do Modo Claro / Escuro
         const themeBtn = document.getElementById('themeToggle');
 
-        // Carrega a preferência salva no navegador
         if (localStorage.getItem('theme') === 'light') {
             document.body.classList.add('light-mode');
             themeBtn.textContent = '🌙 Modo Escuro';
@@ -247,6 +294,26 @@
                 themeBtn.textContent = '☀️ Modo Claro';
                 localStorage.setItem('theme', 'dark');
             }
+        });
+
+        // Lógica da Barra de Pesquisa em Tempo Real
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card-materia');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            cards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+
+                // Mostra o card se o título ou a descrição contiver o texto pesquisado
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     </script>
 
